@@ -1,0 +1,17 @@
+<h1>Hola mundo {{ title }}</h1>
+<button (click)="cambiarTexto()">Cambiar texto</button>
+
+<h1>To-DO</h1>
+
+<form action="">
+  <h3>Agregar tarea</h3>
+  <input type="text" [(ngModel)]="task" name="task">
+  <button (click)="agregarTarea(task)">Agregar</button>
+
+  <h3>Tareas agregadas</h3>
+  @for (item of tarea; track $index) {
+    <ul>{{item}}</ul>
+  }
+</form>
+
+<router-outlet />
